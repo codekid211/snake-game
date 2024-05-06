@@ -1,57 +1,61 @@
+# Snake Game
 
-# Heart Disease Predicition
+A classic Snake game implemented in Java with a graphical user interface (GUI) using the Swing library.
 
-Introducing AI.works, the ultimate remote work companion. A platform for efficient productivity tracking, multilingual meeting assistance, and engaging in insightful content discussions with our intelligent chatbot – your all-in-one solution for efficient digital collaboration.
+## Description
 
-## Dataset
-This project utilizes the heart failure prediction dataset from Kaggle, available [here](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). The dataset provides a comprehensive set of features for predicting heart failure, forming the foundation for our explorations.
+This repository contains a Java implementation of the popular Snake game. The game is played within a window, where the player controls the movement of a snake using the arrow keys. The objective is to navigate the snake to eat cherries that appear randomly on the game board, causing the snake to grow longer with each cherry eaten. The game ends if the snake collides with the walls or its own body.
 
-## Project Breif
-![architecture](assets/PA.png)
+## Features
 
-Workflow:
-Data Splitting:
+- Score and best score tracking
+- Pause/resume functionality
+- Random cherry spawning
+- Cherry image rendering (or fallback to simple oval if image not found)
+- Game over screen with option to start a new game
+- Smooth snake movement and rendering
 
-We partition the dataset into training and testing subsets to evaluate model performance effectively.
+## Requirements
 
-Model Training:
-Employing Random Forest, Decision Tree, Support Vector Machine, and Logistic Regression models for heart disease prediction.
+- Java Development Kit (JDK) 8 or later
+- No external libraries are required
 
-Model Evaluation:
-Assessing the predictive power of each model on the test set.
+## Installation
 
-Identifying the Best Model:
-Comparing model performances to determine the most effective predictor.
+1. Clone the repository:
+git clone https://github.com/codekid211/snake-game.git
 
-Live Predictions:
-Deploying the best model, Random Forest in this case, for predictions with real-world values.
+2. Navigate to the project directory:
+cd snake-game
 
-## Deployment
+## Usage
 
-To deploy this project run
+1. Compile the Java source files:
 
-First clone the repo
+javac Main.java
 
-Then install the following libraries
-```python
-pip install -r requirements.txt
-```
-You also require API keys for the following
-- huggingface
-- Fitbit
+2. Run the compiled `Main` class:
 
-After install all the dependencies 
-```bash
-- open cmd and run
-- python Heart_Disease.py
-```
+java Main
 
-## Screenshots
 
-![Result of Random forest](assets/RF.png)
-![Result of Decision Tree](assets/DT.png)
-![Result of Logistic Regression](assets/LG.png)
-![Result of SVM](assets/SVM.png)
+This will launch the Snake game window.
 
-## Contribution
-If you have ideas for improvement or wish to contribute, please open an issue or submit a pull request. Collaboration is highly encouraged!
+## Project Structure
+
+The project consists of the following Java classes:
+
+- `Main`: The entry point of the application, which creates and displays the game window.
+- `Game`: The main class that handles the game logic, rendering, and user input.
+- `Snake`: Represents the snake object and manages its movement and growth.
+- `Point`: A utility class that represents a 2D point and provides methods for moving and intersecting points.
+- `Direction`: An enumeration representing the four possible directions (up, down, left, right) for the snake's movement.
+- `GameStatus`: An enumeration representing the different states of the game (not started, running, paused, game over).
+
+## Contributing
+
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
